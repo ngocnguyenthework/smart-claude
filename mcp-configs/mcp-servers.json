@@ -1,0 +1,41 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_PAT_HERE"
+      },
+      "description": "GitHub operations — PRs, issues, repos, code search"
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"],
+      "description": "Live documentation lookup for NestJS, FastAPI, Terraform, K8s, SQLAlchemy, TypeORM, Prisma"
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "description": "Chain-of-thought reasoning for architecture decisions and complex debugging"
+    },
+    "firecrawl": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "YOUR_FIRECRAWL_KEY_HERE"
+      },
+      "description": "Web research for AWS docs, Terraform registry, K8s docs, framework changelogs"
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "description": "Persistent memory for infrastructure decisions, architecture choices, and cross-session context"
+    }
+  },
+  "_usage": {
+    "install": "Copy desired servers into ~/.claude.json under mcpServers",
+    "stack": "Optimized for NestJS + FastAPI + Terraform + AWS + K8s workflow",
+    "context_warning": "5 servers kept lean — per ECC longform guide, keep under 10 enabled / 80 tools to preserve context window",
+    "daily_enable": "Enable github + context7 always. Enable others as needed per session."
+  }
+}
